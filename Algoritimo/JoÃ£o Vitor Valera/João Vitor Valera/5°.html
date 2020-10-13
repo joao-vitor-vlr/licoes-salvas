@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+Valor da pizza?<input id="valor"><br>
+Quantas pessoas?<input id="pessoas"><br>
+
+
+<button onclick= "calcular()">Rola a pizza?</button>
+<div id="preco"></div>
+
+<div id="deu_ruim"></div>
+<b style="color: navy;"></b>
+</body>
+</html>
+
+<script>
+
+function calcular() {
+    var V1 = Number(valor.value)
+    
+    var V2 = Number(pessoas.value)
+    
+    var V3 = V1/V2
+    
+    deu_ruim.innerHTML = ""
+    
+    preco.innerHTML = (`Cada amigo vai pagar R$${V3.toFixed(2)} pela pizza`)
+
+        if (V3 > 20) {
+
+            deu_ruim.innerHTML = `<b style="color: navy;"><i>"Deu ruim! Pizza muito cara!"</i></b>`
+
+        }
+}
+
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual o consumo de kWh por mes? <input id="valor"><br>
+    <button onclick="calcular()">calcular conta de luz</button><br>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+function calcular() {
+    var A1 = Number(valor.value);
+    var A2 = A1 * 0.85;
+    var A3 = A2 * 0.9;
+    resultado.innerHTML = ""
+    resultado.innerHTML = `R$${A2.toFixed(2)}`
+        if(A1 < 100) {
+            resultado.innerHTML = `R$${A3.toFixed(2)}`
+        }
+}
+
+
+</script>

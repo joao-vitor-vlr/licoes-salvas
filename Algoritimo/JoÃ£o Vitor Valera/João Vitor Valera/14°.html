@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Distancia da pizzaria ate sua casa: <input id="distancia">km<br>
+    <button onclick="verificar()">verificar disponibilidade</button>
+    <div id="resultado"></div>
+    
+</body>
+</html>
+<script>
+function verificar() {
+    var A1 = Number(distancia.value)
+    resultado.innerHTML = ""
+if (A1 >= 250) {
+    resultado.innerHTML = `<b style="color: red;">A Pizza Rãti não entrega neste endereço!</b>`
+
+}
+if (A1 < 250) {
+    resultado.innerHTML = `<b style="color: orange;">A sua pizza será entregue, porém o valor de entrega é de R$ 25,00</b>`
+}
+if (A1 < 50) {
+    resultado.innerHTML = `<b style="color: olivedrab;">A sua pizza será entregue e não custará nada para você :)</b>`
+}
+}
+
+
+
+</script>

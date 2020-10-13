@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Renda familiar: <input id="renda"><br>
+    Valor da prestação: <input id="Valor"><br>
+    <button onclick="calular()">Verificar financiamento</button>
+    <div id="resultado"></div>
+    <div id="complemento"></div>
+    <b style="color: maroon;"></b>
+</body>
+</html>
+<script>
+function calular() {
+    var B1 = Number(Valor.value) / Number(renda.value);
+    var B2 = B1 * 100;
+    
+    resultado.innerHTML = ""
+    complemento.innerHTML = ""
+    resultado.innerHTML = `a prestação corresponde a ${B2.toFixed(2)}% da renda familiar`
+        if(B2 > 30){
+            complemento.innerHTML = `<b style="color: maroon;">Será necessario complementar renda familiar</b>`
+        }
+}
+
+
+</script>

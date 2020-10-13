@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+Quantas latinhas você consome por dia? <input id="latas"><br>
+
+<button onclick= "calcular_latinhas()">Quantos refris?</button>
+<div id="mensagem_lata"></div>
+
+<div id="diabete"></div>
+<span style="background-color: maroon; color: whitesmoke;"></span>
+</body>
+</html>
+
+<script>
+function calcular_latinhas() {
+    var L1 = Number(latas.value);
+    
+    var L2 = L1 * 365;
+
+    diabete.innerHTML = ""
+
+if (L2 >= 500) {
+
+    diabete.innerHTML = `<span style="background-color: maroon; color: whitesmoke;">Cuidado com o diabetes!</span>`
+
+} 
+
+
+mensagem_lata.innerHTML = (`Você consome ${L2} latinhas por ano`)
+
+}
+
+
+
+</script>

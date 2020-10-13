@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Horario em que voce assiste netflix: <input id="hrs"><br>
+    <button onclick="verificar()">Ver recomendação</button>
+    <div id="netflix"></div>
+</body>
+</html>
+<script>
+function verificar() {
+    var A1 = Number(hrs.value)
+    netflix.innerHTML = ""
+    netflix.innerHTML = `Não é recomendável que você assista sua série favorita as ${A1}hr!`
+    if(A1 > 21){
+        netflix.innerHTML = `O horário ${A1}hr é adequado para assistir sua série favorita!`
+        }
+        if(A1 < 19){
+        netflix.innerHTML = `O horário ${A1}hr é adequado para assistir sua série favorita!`
+        }
+
+
+}
+
+
+
+</script>

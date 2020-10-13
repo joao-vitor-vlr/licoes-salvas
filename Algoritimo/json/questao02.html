@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+</head>
+<body>
+      <input id="nome1" placeholder="informe nome do time"><br>
+      <input id="vit1" placeholder="informe quantidade de vitorias " ><br>
+      <input id="der1" placeholder="informe quantidade de derrotas" ><br>
+      <input id="emp1" placeholder="informe quantidade de empates" ><br><br>
+
+      <input id="nome2" placeholder="informe nome do time"><br>
+      <input id="vit2" placeholder="informe quantidade de vitorias " ><br>
+      <input id="der2" placeholder="informe quantidade de derrotas" ><br>
+      <input id="emp2" placeholder="informe quantidade de empates" ><br>
+      <button onclick="resultado()">comparar campanhas</button>
+      <div id="divresposta1"></div>
+      <div id="divresposta2"></div>
+</body>
+</html>
+<script>
+function resultado(){
+      
+      let tnome1 = (nome1.value);
+
+      let time1 = {
+      vitorias : Number(vit1.value),
+      derrotas : Number(der1.value),
+      empates : Number(emp1.value), 
+      };
+      
+      let tnome2 = (nome2.value);
+
+      let time2 = {
+      vitorias : Number(vit2.value),
+      derrotas : Number(der2.value),
+      empates : Number(emp2.value), 
+      };
+
+      time1.pontos = (time1.vitorias*3) + (time1.empates);
+      time2.pontos = (time2.vitorias*3) + (time2.empates);
+
+      divresposta1.innerHTML = `O time ${tnome1} terminou o campeonato com ${time1.pontos} pontos`;
+      divresposta2.innerHTML = `O time ${tnome2} terminou o campeonato com ${time2.pontos} pontos`;
+
+}
+</script>

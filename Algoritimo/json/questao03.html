@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+</head>
+<body>
+        Saldo: R$ <b id="saldo">0.00</b>
+        Depósitos: <b id="dep">0</b>
+        Saques: <b id="saque">0</b>
+        <br>
+        <button onclick="depositar()">Depositar 100</button>
+        <button onclick="sacar()">Sacar 20</button>
+        <div id="msg"></div>
+        
+</body>
+</html>
+<script>
+
+    let aux = {
+        saldo : 0,
+        dep : 0 ,
+        saque : 0
+    }
+
+function depositar(){
+
+    var botao1 = {
+    saldo :  +100,
+    deposito :  +1 
+    };
+
+
+    saldo.innerHTML = `${botao1.saldo.toFixed(2)}`;
+    dep.innerHTML = `${botao1.deposito}`;
+
+    ++botao1;
+}
+function sacar(){
+
+    var botao2 = {
+    saldo : -20,
+    saques : +1
+    };
+
+    saldo.innerHTML = `${botao2.saldo.toFixed(2)}`;
+    saque.innerHTML = `${botao2.saques}`;
+}
+if(saldo <0){
+  msg.innerHTML= `Azar do usuário ser gastador, né?`;
+}
+
+</script>

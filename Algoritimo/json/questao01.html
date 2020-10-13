@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+</head>
+<body>
+      <input id="vit" placeholder="informe quantidade de vitorias " ><br>
+      <input id="der" placeholder="informe quantidade de derrotas" ><br>
+      <input id="emp" placeholder="informe quantidade de empates" ><br>
+      <button onclick="resultado()">analisar campanha</button>
+      <div id="divresposta"></div>
+</body>
+</html>
+<script>
+function resultado(){
+      let time = {
+      vitorias : Number(vit.value),
+      derrotas : Number(der.value),
+      empates : Number(emp.value), 
+      };
+
+      time.pontos = (time.vitorias*3) + (time.empates);
+
+      divresposta.innerHTML = `O time terminou o campeonato com ${time.pontos} pontos`;
+
+}
+</script>

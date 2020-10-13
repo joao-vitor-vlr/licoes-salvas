@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+Nota 1 <input id="nota1"><br>
+Nota 2 <input id="nota2"><br>
+Nota 3 <input id="nota3"><br>
+
+<button onclick= "analisar()">Analisar desempenho</button>
+<div id="media"></div>
+
+<div id="fora_de_serie"></div>
+
+</body>
+</html>
+
+<script>
+
+function analisar() {
+    var M1 = Number(nota1.value)
+    var M2 = Number(nota2.value)
+    var M3 = Number(nota3.value)
+
+    var M4 = (M1 + M2 + M3)/3
+    
+    fora_de_serie.innerHTML = ""
+
+    media.innerHTML = `Sua media foi de ${M4.toFixed(2)}`
+
+        if (M4 >= 9.4) {
+            fora_de_serie.innerHTML = "Parabéns, você é fora de série!"
+
+        }
+}
+
+</script>
