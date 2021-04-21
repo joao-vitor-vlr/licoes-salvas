@@ -52,9 +52,6 @@ public class TesteApi {
         
         System.out.println(processador.getNome());
         
-        Temperatura temperatura = looca.getTemperatura();
-        
-        System.out.println(temperatura);
         
         Memoria memoria = looca.getMemoria();
         
