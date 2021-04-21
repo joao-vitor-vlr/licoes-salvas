@@ -65,11 +65,7 @@ public class TesteApi {
         
         
         
-        DiscosGroup grupoDeDiscos = looca.getGrupoDeDiscos();
-        List<Disco> discos = grupoDeDiscos.getDiscos();
-            for (Disco disco : discos) {
-                System.out.println(disco);
-                }
+        
     }
     
 }
