@@ -63,15 +63,7 @@ public class TesteApi {
         System.out.println(memoria);
         
         
-        ProcessosGroup grupoDeProcessos = looca.getGrupoDeProcessos();
         
-        System.out.println(grupoDeProcessos.getTotalThreads());
-        System.out.println("-------00000000000000000000000000000000000000000000000000000");
-        List<Processo> processos = grupoDeProcessos.getProcessos();
-        for (Processo processo : processos) {
-             System.out.println(processo);
-             System.out.println("----------------------------------------------------");
-            }
         
         DiscosGroup grupoDeDiscos = looca.getGrupoDeDiscos();
         List<Disco> discos = grupoDeDiscos.getDiscos();
